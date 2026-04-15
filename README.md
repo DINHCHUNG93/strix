@@ -1,3 +1,75 @@
+
+🚨 AI vừa “xóa sổ” thêm một ngành nữa!
+
+💡 (bản thay thế là mã nguồn mở 100%, đã có hơn ⭐ 24k sao)
+
+💸 Một lần kiểm thử xâm nhập (pentest) thông thường tốn khoảng 30.000–50.000 USD cho mỗi đợt, mất 4–6 tuần để xác định phạm vi và ký NDA, và kết quả là một file PDF… 📄 lỗi thời ngay khi bạn merge PR tiếp theo.
+
+⏳ Mô hình này còn hợp lý khi các team phát hành phần mềm chậm.
+
+⚠️ Nhưng giờ thì nó “toang” khi các team deploy nhiều lần mỗi ngày 🚀 và bề mặt tấn công thay đổi sau mỗi lần push.
+
+🤖 Thực tế, vấn đề lớn hơn là hacker cũng đang dùng AI để tìm lỗ hổng nhanh hơn bất kỳ chu kỳ audit hàng quý nào có thể theo kịp.
+
+🕳️ Khoảng thời gian bạn bị “lộ” không còn là giữa các lần deploy nữa, mà là giữa các lần pentest.
+
+🧠 Để giải quyết điều này, các AI agent đang âm thầm thu hẹp khoảng trống đó bằng cách làm những việc trước đây cần pentester con người:
+
+•	🔍 Thăm dò bề mặt tấn công và kết hợp các lỗ hổng nhỏ thành tác động thực sự
+
+•	🧪 Xác thực phát hiện bằng bằng chứng khai thác (proof-of-exploit)
+
+•	🛠️ Tạo code khắc phục có thể merge ngay
+
+•	🔁 Và chạy liên tục, không phải mỗi quý một lần
+
+🧩 Nếu bạn muốn thấy cách này hoạt động thực tế, nó đã được triển khai trong Strix — một framework mã nguồn mở (⭐ 24k+) cho pentest AI liên tục.
+
+⚙️ Nó triển khai một đồ thị các AI agent hoạt động như hacker thật trên hệ thống của bạn. Mỗi agent chuyên về một kiểu tấn công khác nhau, chạy song song và chia sẻ phát hiện.
+
+👉 Ví dụ:
+
+•	Nếu một agent tìm ra cách bypass xác thực 🔓
+
+•	Agent khác sẽ ngay lập tức kiểm tra xem có thể leo thang đặc quyền 📈
+
+🧰 Các agent hoạt động với đầy đủ công cụ:
+
+•	🌐 HTTP proxy
+
+•	🌍 Tự động hóa trình duyệt cho luồng xác thực
+
+•	💻 Truy cập terminal
+
+•	🐍 Môi trường Python để phát triển exploit tùy chỉnh
+
+⚡ Strix được thiết kế để chạy theo tốc độ dev thực sự phát hành:
+
+•	Trước khi release 📦
+
+•	Sau các thay đổi lớn 🔄
+
+•	Và liên tục khi ứng dụng phát triển 📊
+
+🔗 Bạn có thể trỏ nó vào:
+
+•	Source code 📂
+
+•	Ứng dụng đang chạy 🌐
+
+•	Hoặc cả hai (grey-box testing)
+
+⚠️ Code đưa lên production có thể do AI sinh ra.
+💥 Nhưng khi bị hack, thiệt hại vẫn là thật.
+
+🚀 Chỉ cần chạy:
+
+strix --target ./your-app
+
+
+để bắt đầu một đợt pentest.
+
+
 <p align="center">
   <a href="https://strix.ai/">
     <img src="https://github.com/usestrix/.github/raw/main/imgs/cover.png" alt="Strix Banner" width="100%">
